@@ -2,12 +2,14 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "homepage": "https://new5558.github.io/ywc17-homework",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-svelte3": "^2.7.3",
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
     "prettier-plugin-svelte": "^0.7.0",
@@ -31,6 +33,7 @@
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
     "format": "prettier --write \"src/**/*.svelte\"",
-    "lint": "eslint --fix src/App.svelte"
+    "lint": "eslint --fix src/App.svelte",
+    "deploy": "gh-pages -d public"
   }
 }
