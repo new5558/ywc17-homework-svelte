@@ -1,3 +1,5 @@
+@import "preflight.css";
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -7,13 +9,13 @@ html, body {
 body {
 	color: #333;
 	margin: 0;
-	padding: 8px;
+	padding: 0;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	line-height: 1.8;
+	font-family: TATSanaSuksa, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
-	color: rgb(0,100,200);
 	text-decoration: none;
 }
 
@@ -59,4 +61,24 @@ button:active {
 
 button:focus {
 	border-color: #666;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+@font-face {
+    font-family: 'TATSanaChon';
+    src: url('./fonts/TATSanaChon-Regular.woff2');
+}
+
+
+@font-face {
+	font-family: 'TATSanaSuksa';
+	src: url('./fonts/TATSanaSuksa-Regular.woff2');
+}
+
+@font-face {
+	font-family: 'TATSanaSuksaBold';
+	src: url('./fonts/TATSANA CHON-BLD.TTF');
 }

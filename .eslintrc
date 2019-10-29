@@ -1,15 +1,15 @@
-{
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module"
-  },
-  "plugins": ["svelte3"],
-  "extends": ["prettier"],
-  "overrides": [{ "files": "*.svelte", "processor": "svelte3/svelte3" }],
-  "rules": {
-    "prettier/prettier": "error"
-  },
-  "settings": {
-		"import/core-modules": ["svelte"]
-	}
-}
+// {
+//   "parser": "babel-eslint",
+//   "parserOptions": {
+//     "sourceType": "module"
+//   },
+//   "plugins": ["svelte3"],
+//   "extends": ["prettier"],
+//   "overrides": [{ "files": "*.svelte", "processor": "svelte3/svelte3" }],
+//   "rules": {
+//     "prettier/prettier": "error"
+//   },
+//   "settings": {
+// 		"import/core-modules": ["svelte"]
+// 	}
+// }

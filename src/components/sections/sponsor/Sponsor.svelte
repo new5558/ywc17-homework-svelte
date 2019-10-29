@@ -1,0 +1,37 @@
+<script>
+  import SponsorImage from './SponsorImage.svelte'
+</script>
+
+<style lang="scss">
+  .sponsor-container {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .image-container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
+
+<div class="sponsor-container">
+  <div class="image-container">
+    <SponsorImage
+      href="https://www.mof.go.th/th/home"
+      src="./image/sponsor/MOF.png" />
+    <SponsorImage href="http://www.fpo.go.th" src="./image/sponsor/FPO.png" />
+    <SponsorImage href="https://www.cgd.go.th" src="./image/sponsor/CGD.png" />
+    <SponsorImage
+      href="https://www.newcb.ktb.co.th"
+      src="./image/sponsor/Krungthai.png" />
+    <SponsorImage
+      href="https://www.mots.go.th"
+      src="./image/sponsor/MOTS.png" />
+    <SponsorImage
+      href="https://thai.tourismthailand.org"
+      src="./image/sponsor/TAT.png" />
+  </div>
+</div>

@@ -1,19 +1,37 @@
 <script>
   import { onMount } from 'svelte'
+  import Navbar from './components/sections/Navbar.svelte'
+  import Banner from './components/sections/Banner.svelte'
+  import Announcement from './components/sections/Announcement.svelte'
+  import About from './components/sections/About.svelte'
+  import Contact from './components/sections/contact/Contact.svelte'
+  import Sponsor from './components/sections/sponsor/Sponsor.svelte'
+  import Info from './components/sections/information/Info.svelte'
+  import Footer from './components/sections/Footer.svelte'
+  let apiData = {}
   onMount(() => {
     fetch('https://panjs.com/ywc.json')
       .then(response => response.json())
-      .then(console.log)
+      .then(result => (apiData = result))
   })
-  export let name;
+  export let name
 </script>
 
 <style lang="scss">
-  h1 {
-    &:hover {
-      color: red;
-    }
+  .content {
+    margin-top: 60px;
   }
 </style>
 
-<h1>Hello {name}!</h1>
+<Navbar items={apiData.navbarItems} />
+<div class="content">
+<Banner />
+<Announcement duration={apiData.duration} />
+<About detail={apiData.detail} condition={apiData.condition} />
+<Contact />
+<Sponsor />
+<footer>
+  <Info />
+  <Footer />
+</footer>
+</div>

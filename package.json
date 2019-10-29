@@ -1,6 +1,7 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
@@ -17,18 +18,19 @@
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "sass": "^1.23.1",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.2.0"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4",
-    "svelte-preprocess": "^3.2.0"
+    "sanitize-html": "^1.20.1",
+    "sirv-cli": "^0.4.4"
   },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
-    "format": "prettier --write --plugin-search-dir=. src/App.svelte",
+    "format": "prettier --write \"src/**/*.svelte\"",
     "lint": "eslint --fix src/App.svelte"
   }
 }
