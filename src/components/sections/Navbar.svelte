@@ -168,7 +168,10 @@
       </div>
     </div>
   </div>
-  <div class:dropdown-open={isOpen} class:dropdown-close={!isOpen} class="navbar-container">
+  <div
+    class:dropdown-open={isOpen}
+    class:dropdown-close={!isOpen}
+    class="navbar-container">
     <ul>
       {#each items as item (item.label)}
         <li class="navbar-text">
