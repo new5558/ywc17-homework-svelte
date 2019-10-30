@@ -25,13 +25,13 @@
 
 <Navbar items={apiData.navbarItems} />
 <div class="content">
-<Banner />
-<Announcement duration={apiData.duration} />
-<About detail={apiData.detail} condition={apiData.condition} />
-<Contact />
-<Sponsor />
-<footer>
-  <Info />
-  <Footer />
-</footer>
+  <Banner />
+  <Announcement duration={apiData.duration} />
+  <About detail={apiData.detail} condition={apiData.condition} />
+  <Contact />
+  <Sponsor />
+  <footer>
+    <Info />
+    <Footer />
+  </footer>
 </div>

@@ -3,21 +3,35 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   .item-container {
     display: flex;
     justify-content: space-between;
     max-width: 1140px;
     width: 100%;
+    @include for-phone-only {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
   .info-container {
     display: flex;
     justify-content: center;
     padding: 30px;
     background-color: #fafafa;
+    @include for-phone-only {
+      padding: 44px 30px;
+    }
   }
   .item {
     &-image {
       width: 108px;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+      margin-left: 0.25rem;
     }
     padding: 0 15px;
     max-width: 25%;
@@ -25,11 +39,9 @@
     text-decoration: none;
     color: #333333;
     font-size: 14px;
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-      margin-left: 0.25rem;
+    @include for-phone-only {
+      padding: 0 30px;
+      max-width: 100%;
     }
   }
 </style>

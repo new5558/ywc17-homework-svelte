@@ -3,6 +3,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   .info {
     display: flex;
     flex-direction: column;
@@ -13,6 +14,9 @@
       color: #e6332a;
       margin-top: 24px;
       font-size: 16px;
+      @include for-phone-only {
+        margin-top: 15px;
+      }
     }
   }
 </style>

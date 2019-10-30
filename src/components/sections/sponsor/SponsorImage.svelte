@@ -5,6 +5,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   img {
     &:hover {
       transform: scale(1.2);
@@ -12,6 +13,17 @@
     }
     width: 102px;
     cursor: pointer;
+    @include for-phone-only {
+      width: 54px;
+    }
+  }
+  a {
+    @include for-phone-only {
+      max-width: 33%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 </style>
 

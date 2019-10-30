@@ -3,6 +3,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   button {
     box-shadow: 0 15px 30px 0 rgba(28, 78, 132, 0.4);
     font-family: TATSanaSuksaBold;
@@ -22,6 +23,11 @@
     &:focus {
       outline: 0;
     }
+    @include for-phone-only {
+      width: auto;
+      font-size: 18px;
+      margin: 10px 0;
+    }
   }
   .button-container {
     width: 100%;
@@ -36,12 +42,18 @@
     align-items: center;
     flex-direction: column;
     margin: 26px 15px;
+    @include for-phone-only {
+      margin: 26px 15px 0 15px;
+    }
   }
   .since {
     font-family: TATSanaSuksaBold;
     font-weight: bold;
   }
   .duration {
+    @include for-phone-only {
+      font-size: 30px;
+    }
     line-height: 1.8;
     margin-top: -10px;
     font-size: 48px;
@@ -54,6 +66,11 @@
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
+  // @media (max-width: 577px) {
+  //   .duration {
+  //     font-size: 30px;
+  //   }
+  // }
 </style>
 
 <div class="header-container">

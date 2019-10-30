@@ -3,6 +3,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   .information-container {
     margin-top: 150px;
     display: flex;
@@ -12,6 +13,9 @@
     max-width: 1140px;
     display: flex;
     justify-content: center;
+    @include for-phone-only {
+      flex-direction: column;
+    }
   }
 </style>
 

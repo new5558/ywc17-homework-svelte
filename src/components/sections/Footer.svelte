@@ -3,6 +3,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   .footer-container {
     display: flex;
     justify-content: center;
@@ -11,6 +12,9 @@
     background-color: #213a8f;
     color: #fff;
     font-size: 14px;
+    @include for-phone-only {
+      padding: 15px;
+    }
   }
   .link-container {
     display: flex;
@@ -28,10 +32,16 @@
       width: 100%;
       max-width: 75%;
     }
+    @include for-phone-only {
+      flex-direction: column;
+    }
   }
   #copyright {
     width: 100%;
     padding: 8px 31px 8px 0;
+    @include for-phone-only {
+      padding: 8px 31px;
+    }
   }
 </style>
 

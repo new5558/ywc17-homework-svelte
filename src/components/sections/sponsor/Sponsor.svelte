@@ -3,10 +3,14 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   .sponsor-container {
     margin: 100px 0;
     display: flex;
     justify-content: center;
+    @include for-phone-only {
+      margin: 80px 0;
+    }
   }
   .image-container {
     width: 100%;
@@ -14,6 +18,9 @@
     padding: 0 15px;
     display: flex;
     justify-content: space-around;
+    @include for-phone-only {
+      flex-wrap: wrap;
+    }
   }
 </style>
 
