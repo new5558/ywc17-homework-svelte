@@ -59,6 +59,9 @@
         font-size: 18px;
         margin: 10px 0;
       }
+      @media (min-width: 577px) and (max-width: 820px) {
+        width: 500px;
+      }
     }
     hr {
       margin: -3% 0 1rem 0;
