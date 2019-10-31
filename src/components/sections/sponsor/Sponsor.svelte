@@ -4,28 +4,28 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  .sponsor-container {
+  .sponsor {
     margin: 150px 0;
     display: flex;
     justify-content: center;
     @include for-phone-only {
       margin: 80px 0;
     }
-  }
-  .image-container {
-    width: 100%;
-    max-width: 1140px;
-    display: flex;
-    justify-content: space-around;
-    @include for-phone-only {
-      padding: 0 45px;
-      flex-wrap: wrap;
+    &-container {
+      width: 100%;
+      max-width: 1140px;
+      display: flex;
+      justify-content: space-around;
+      @include for-phone-only {
+        padding: 0 45px;
+        flex-wrap: wrap;
+      }
     }
   }
 </style>
 
-<div class="sponsor-container">
-  <div class="image-container">
+<div class="sponsor">
+  <div class="sponsor-container">
     <SponsorImage
       href="https://www.mof.go.th/th/home"
       src="./image/sponsor/MOF.png" />

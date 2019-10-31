@@ -9,10 +9,9 @@
   import Info from './components/sections/information/Info.svelte'
   import Footer from './components/sections/Footer.svelte'
   let apiData = {}
-  onMount(() => {
-    fetch('https://panjs.com/ywc.json')
-      .then(response => response.json())
-      .then(result => (apiData = result))
+  onMount(async () => {
+    const response = await fetch('https://panjs.com/ywc.json')
+    const apiData = await response.json()
   })
   export let name
 </script>

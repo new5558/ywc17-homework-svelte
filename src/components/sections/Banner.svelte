@@ -5,12 +5,12 @@
 <style lang="scss">
   @import 'src/sass/mixins.scss';
   .banner {
-    width: (100% / 3);
-    height: 350px;
-    background-size: cover;
-    &-container {
-      display: flex;
-      width: 100%;
+    display: flex;
+    width: 100%;
+    &-item {
+      width: (100% / 3);
+      height: 350px;
+      background-size: cover;
     }
     &-left {
       background-image: url('./image/banner-left.png');
@@ -29,8 +29,10 @@
       background-image: url('./image/banner-right.png');
     }
     @include for-phone-only {
-      height: 221px;
-      background-position: center;
+      &-item {
+        height: 221px;
+        background-position: center;
+      }
       &-image {
         height: 131px;
         width: 110px;
@@ -42,10 +44,10 @@
   }
 </style>
 
-<div class="banner-container">
-  <div class="banner-left banner" />
-  <div class="banner-center banner">
+<div class="banner">
+  <div class="banner-left banner-item" />
+  <div class="banner-center banner-item">
     <img class="banner-image" src="./image/banner.png" alt="banner" />
   </div>
-  <div class="banner-right banner" />
+  <div class="banner-right banner-item" />
 </div>

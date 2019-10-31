@@ -4,23 +4,24 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  .information-container {
-    margin-top: 150px;
+  .contact {
     display: flex;
     justify-content: center;
-  }
-  .image-container {
-    max-width: 1140px;
-    display: flex;
-    justify-content: center;
-    @include for-phone-only {
-      flex-direction: column;
+    &-container {
+      margin-top: 150px;
+      max-width: 1140px;
+      display: flex;
+      justify-content: center;
+      @include for-phone-only {
+        margin-top: 80px;
+        flex-direction: column;
+      }
     }
   }
 </style>
 
-<div class="information-container">
-  <div class="image-container">
+<div class="contact">
+  <div class="contact-container">
     <ContactBanner
       href="tel:021111144"
       src="./image/Banner_KTB_SQ.png"

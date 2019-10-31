@@ -8,33 +8,6 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  .navbar-container {
-    padding: 0 15px;
-    ul {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      width: 100%;
-      padding: 5px 0 0 0;
-      margin: 0;
-      li {
-        display: inline-block;
-        font-family: TATSanaChon;
-        font-size: 14px;
-        font-weight: bold;
-      }
-      @include for-phone-only {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-    }
-    overflow: hidden;
-    transition: height 0.35s ease;
-    transition-property: height;
-    transition-duration: 0.35s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-  }
   .navbar {
     background-color: #ffffff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -43,8 +16,55 @@
     top: 0;
     left: 0;
     height: 60px;
+    @include for-phone-only {
+      height: auto;
+      padding: 8px 16px;
+      box-shadow: 0 -2px 6px 3px rgba(0, 0, 0, 0.1);
+    }
+    &-container {
+      padding: 0 15px;
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        padding: 5px 0 0 0;
+        margin: 0;
+        @include for-phone-only {
+          flex-direction: column;
+          align-items: flex-end;
+        }
+        li {
+          display: inline-block;
+          font-family: TATSanaChon;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+      overflow: hidden;
+      transition: height 0.35s ease;
+      transition-property: height;
+      transition-duration: 0.35s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    }
+    &-mobile {
+      display: flex;
+      justify-content: space-between;
+      &-logo {
+        display: none;
+        @include for-phone-only {
+          display: block;
+        }
+        width: 35px;
+        height: 48px;
+      }
+    }
     &-text {
       padding: 14px 17px;
+      @include for-phone-only {
+        padding: 8px 0;
+      }
       a {
         position: relative;
         color: rgba(0, 0, 0, 0.5);
@@ -79,38 +99,16 @@
           }
         }
       }
-      @include for-phone-only {
-        padding: 8px 0;
+    }
+    &-dropdown {
+      &-open {
+        height: 134px;
       }
-    }
-    @include for-phone-only {
-      height: auto;
-      padding: 8px 16px;
-      box-shadow: 0 -2px 6px 3px rgba(0, 0, 0, 0.1);
-    }
-  }
-  .mobile {
-    &-navbar {
-      display: flex;
-      justify-content: space-between;
-    }
-    &-logo {
-      display: none;
-      @include for-phone-only {
-        display: block;
-      }
-      width: 35px;
-      height: 48px;
-    }
-  }
-  .dropdown {
-    &-open {
-      height: 134px;
-    }
-    &-close {
-      height: auto;
-      @include for-phone-only {
-        height: 0px;
+      &-close {
+        height: auto;
+        @include for-phone-only {
+          height: 0px;
+        }
       }
     }
   }
@@ -121,6 +119,9 @@
     cursor: pointer;
     border: 0;
     padding: 4px 12px;
+    @include for-desktop-only {
+      display: none;
+    }
     &-box {
       position: relative;
       width: 30px;
@@ -142,12 +143,7 @@
         top: 20px;
       }
     }
-    @include for-desktop-only {
-      display: none;
-    }
-  }
-  .hamburger-open {
-    & .hamburger-inner {
+    &-open .hamburger-inner {
       &-1 {
         top: 11px;
         transform: rotate(135deg);
@@ -165,8 +161,11 @@
 </style>
 
 <div class="navbar">
-  <div class="mobile-navbar">
-    <img class="mobile-logo" alt="logo" src="./image/information-logo.png" />
+  <div class="navbar-mobile">
+    <img
+      class="navbar-mobile-logo"
+      alt="logo"
+      src="./image/information-logo.png" />
     <div class:hamburger-open={isOpen} class="hamburger" on:click={toggle}>
       <div class="hamburger-box">
         <div class="hamburger-inner hamburger-inner-1" />
@@ -176,8 +175,8 @@
     </div>
   </div>
   <div
-    class:dropdown-open={isOpen}
-    class:dropdown-close={!isOpen}
+    class:navbar-dropdown-open={isOpen}
+    class:navbar-dropdown-close={!isOpen}
     class="navbar-container">
     <ul>
       {#each items as item (item.label)}

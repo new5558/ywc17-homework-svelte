@@ -12,11 +12,9 @@
     padding: 0 15px;
     @include for-phone-only {
       padding: 0 30px;
-    }
-  }
-  img {
-    @include for-phone-only {
-      width: 80%;
+      img {
+        width: 80%;
+      }
     }
   }
 </style>

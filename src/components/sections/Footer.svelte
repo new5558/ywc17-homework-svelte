@@ -4,7 +4,7 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  .footer-container {
+  .footer {
     display: flex;
     justify-content: center;
     padding: 0 15px;
@@ -16,28 +16,28 @@
       padding: 15px;
       font-size: 12px;
     }
-  }
-  .link-container {
-    display: flex;
-    max-width: 1140px;
-    width: 100%;
-    padding: 0 15px;
-    li {
-      a {
-        color: #fff;
-        &:hover {
-          text-decoration: none;
+    &-container {
+      display: flex;
+      max-width: 1140px;
+      width: 100%;
+      padding: 0 15px;
+      @include for-phone-only {
+        flex-direction: column;
+      }
+      li {
+        padding: 8px 31px;
+        width: 100%;
+        max-width: 75%;
+        @include for-phone-only {
+          max-width: 100%;
+        }
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
-      padding: 8px 31px;
-      width: 100%;
-      max-width: 75%;
-      @include for-phone-only {
-        max-width: 100%;
-      }
-    }
-    @include for-phone-only {
-      flex-direction: column;
     }
   }
   #copyright {
@@ -49,8 +49,8 @@
   }
 </style>
 
-<div class="footer-container">
-  <ul class="link-container">
+<div class="footer">
+  <ul class="footer-container">
     <li id="copyright">Copyright © 2003-2019</li>
     <li>
       <a

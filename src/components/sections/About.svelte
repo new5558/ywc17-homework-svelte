@@ -5,44 +5,44 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  .content {
-    padding: 0 15px;
-    max-width: 83.33%;
-    text-align: left;
+  .about {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
     @include for-phone-only {
-      max-width: 100%;
+      padding: 0 15px;
     }
-  }
-  .container {
-    &-center {
-      display: flex;
-      justify-content: center;
-      margin-top: 70px;
+    &-container {
+      width: 100%;
+      max-width: 1140px;
       @include for-phone-only {
-        padding: 0 15px;
+        max-width: 100%;
       }
     }
-    width: 100%;
-    max-width: 1140px;
-    @include for-phone-only {
-      max-width: 100%;
+    &-content {
+      padding: 0 15px;
+      max-width: 83.33%;
+      text-align: left;
+      @include for-phone-only {
+        max-width: 100%;
+      }
     }
-  }
-  .title {
-    font-family: TATSanaSuksaBold;
-    line-height: 1.8;
-    font-size: 36px;
-    font-weight: bold;
-    color: #e6332a;
-    @include for-phone-only {
-      font-size: 24px;
-      line-height: 1.6;
+    &-title {
+      font-family: TATSanaSuksaBold;
+      line-height: 1.8;
+      font-size: 36px;
+      font-weight: bold;
+      color: #e6332a;
+      @include for-phone-only {
+        font-size: 24px;
+        line-height: 1.6;
+      }
     }
-  }
-  .condition {
-    margin-top: 1.5rem;
   }
   .detail {
+    &-condition {
+      margin-top: 1.5rem;
+    }
     &-description {
       margin-top: 1.5rem;
     }
@@ -62,10 +62,10 @@
   }
 </style>
 
-<div class="container-center">
-  <div class="container">
-    <div class="content">
-      <div class="title">
+<div class="about">
+  <div class="about-container">
+    <div class="about-content">
+      <div class="about-title">
         มาตรการส่งเสริมการบริโภค
         <br />
         ในประเทศ “ชิมช้อปใช้”
@@ -73,9 +73,9 @@
       <div class="detail detail-description">
         {@html detail}
       </div>
-      <div class="condition">
+      <div class="detail-condition">
         <div class="detail detail-topic">เงื่อนไขการเข้าร่วมมาตรการ</div>
-        <div class="detail detail-condition">
+        <div class="detail">
           {@html condition}
         </div>
       </div>

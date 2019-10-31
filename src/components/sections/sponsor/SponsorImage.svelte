@@ -6,24 +6,23 @@
 
 <style lang="scss">
   @import 'src/sass/mixins.scss';
-  img {
-    &:hover {
-      transform: scale(1.2);
-      transition: all 0.55s ease-in-out;
-    }
-    width: 102px;
-    cursor: pointer;
-    @include for-phone-only {
-      width: 54px;
-      height: 65px;
-    }
-  }
   a {
     @include for-phone-only {
-      // width: 115px;
       padding: 0 15px;
       display: flex;
       justify-content: center;
+    }
+    img {
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.55s ease-in-out;
+      }
+      width: 102px;
+      cursor: pointer;
+      @include for-phone-only {
+        width: 54px;
+        height: 65px;
+      }
     }
   }
 </style>
