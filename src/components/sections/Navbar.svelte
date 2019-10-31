@@ -23,6 +23,12 @@
     }
     &-container {
       padding: 0 15px;
+      overflow: hidden;
+      transition: height 0.35s ease;
+      transition-property: height;
+      transition-duration: 0.35s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
       ul {
         display: flex;
         justify-content: center;
@@ -41,12 +47,6 @@
           font-weight: bold;
         }
       }
-      overflow: hidden;
-      transition: height 0.35s ease;
-      transition-property: height;
-      transition-duration: 0.35s;
-      transition-timing-function: ease;
-      transition-delay: 0s;
     }
     &-mobile {
       display: flex;
