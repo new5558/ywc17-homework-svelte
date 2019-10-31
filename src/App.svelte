@@ -11,7 +11,7 @@
   let apiData = {}
   onMount(async () => {
     const response = await fetch('https://panjs.com/ywc.json')
-    const apiData = await response.json()
+    apiData = await response.json()
   })
   export let name
 </script>
