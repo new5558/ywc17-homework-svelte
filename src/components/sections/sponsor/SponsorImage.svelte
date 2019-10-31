@@ -11,17 +11,18 @@
       padding: 0 15px;
       display: flex;
       justify-content: center;
+      min-width: 33%;
     }
     img {
-      &:hover {
-        transform: scale(1.2);
-        transition: all 0.55s ease-in-out;
-      }
       width: 102px;
       cursor: pointer;
       @include for-phone-only {
         width: 54px;
         height: 65px;
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.55s ease-in-out;
       }
     }
   }
