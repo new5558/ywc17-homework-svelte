@@ -15,6 +15,7 @@
     cursor: pointer;
     @include for-phone-only {
       width: 54px;
+      height: 65px;
     }
   }
   a {
