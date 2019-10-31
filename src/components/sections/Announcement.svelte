@@ -66,11 +66,6 @@
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  // @media (max-width: 577px) {
-  //   .duration {
-  //     font-size: 30px;
-  //   }
-  // }
 </style>
 
 <div class="header-container">
