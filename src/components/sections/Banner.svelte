@@ -16,6 +16,10 @@
       background-image: url('./image/banner-left.png');
     }
     &-center {
+      img {
+        max-width: 240px;
+        max-height: 280px;
+      }
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,9 +30,13 @@
     }
     @include for-phone-only {
       height: 221px;
+      background-position: center;
       &-image {
         height: 131px;
         width: 110px;
+      }
+      &-left {
+        background-image: url('./image/banner-left-s.png');
       }
     }
   }

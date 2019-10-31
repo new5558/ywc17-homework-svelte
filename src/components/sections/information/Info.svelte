@@ -25,13 +25,15 @@
   }
   .item {
     &-image {
+      @include for-phone-only {
+        width: 145px;
+      }
       width: 108px;
     }
     a {
       &:hover {
         text-decoration: none;
       }
-      margin-left: 0.25rem;
     }
     padding: 0 15px;
     max-width: 25%;

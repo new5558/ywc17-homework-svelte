@@ -5,7 +5,7 @@
 <style lang="scss">
   @import 'src/sass/mixins.scss';
   .sponsor-container {
-    margin: 100px 0;
+    margin: 150px 0;
     display: flex;
     justify-content: center;
     @include for-phone-only {
@@ -15,10 +15,10 @@
   .image-container {
     width: 100%;
     max-width: 1140px;
-    padding: 0 15px;
     display: flex;
     justify-content: space-around;
     @include for-phone-only {
+      padding: 0 45px;
       flex-wrap: wrap;
     }
   }

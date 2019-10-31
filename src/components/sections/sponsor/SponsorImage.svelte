@@ -20,8 +20,8 @@
   }
   a {
     @include for-phone-only {
-      max-width: 33%;
-      width: 100%;
+      // width: 115px;
+      padding: 0 15px;
       display: flex;
       justify-content: center;
     }

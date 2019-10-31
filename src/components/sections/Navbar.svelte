@@ -17,6 +17,12 @@
       width: 100%;
       padding: 5px 0 0 0;
       margin: 0;
+      li {
+        display: inline-block;
+        font-family: TATSanaChon;
+        font-size: 14px;
+        font-weight: bold;
+      }
       @include for-phone-only {
         flex-direction: column;
         align-items: flex-end;
@@ -38,11 +44,11 @@
     left: 0;
     height: 60px;
     &-text {
-      padding: 14px 15px;
+      padding: 14px 17px;
       a {
         position: relative;
         color: rgba(0, 0, 0, 0.5);
-        font-family: 'TATSanaSuksa';
+        font-family: TATSanaChon;
         font-size: 16px;
         text-decoration: none;
         list-style-type: none;
@@ -51,7 +57,6 @@
         @include for-desktop-only {
           color: #333333;
           font-weight: bold;
-          font-family: TATSanaChon;
           font-size: 14px;
           &:after {
             content: '';
@@ -81,6 +86,7 @@
     @include for-phone-only {
       height: auto;
       padding: 8px 16px;
+      box-shadow: 0 -2px 6px 3px rgba(0, 0, 0, 0.1);
     }
   }
   .mobile {
@@ -114,6 +120,7 @@
     margin: 0;
     cursor: pointer;
     border: 0;
+    padding: 4px 12px;
     &-box {
       position: relative;
       width: 30px;

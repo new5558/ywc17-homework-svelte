@@ -31,11 +31,12 @@
   .title {
     font-family: TATSanaSuksaBold;
     line-height: 1.8;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     color: #e6332a;
     @include for-phone-only {
       font-size: 24px;
+      line-height: 1.6;
     }
   }
   .condition {

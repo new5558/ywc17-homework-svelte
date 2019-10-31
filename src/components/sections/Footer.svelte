@@ -14,6 +14,7 @@
     font-size: 14px;
     @include for-phone-only {
       padding: 15px;
+      font-size: 12px;
     }
   }
   .link-container {
@@ -31,6 +32,9 @@
       padding: 8px 31px;
       width: 100%;
       max-width: 75%;
+      @include for-phone-only {
+        max-width: 100%;
+      }
     }
     @include for-phone-only {
       flex-direction: column;

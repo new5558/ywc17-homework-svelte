@@ -15,7 +15,7 @@
       margin-top: 24px;
       font-size: 16px;
       @include for-phone-only {
-        margin-top: 15px;
+        margin: 15px 0 10px 0;
       }
     }
   }

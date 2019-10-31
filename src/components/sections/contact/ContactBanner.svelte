@@ -5,8 +5,19 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   a {
+    display: flex;
+    justify-content: center;
     padding: 0 15px;
+    @include for-phone-only {
+      padding: 0 30px;
+    }
+  }
+  img {
+    @include for-phone-only {
+      width: 80%;
+    }
   }
 </style>
 

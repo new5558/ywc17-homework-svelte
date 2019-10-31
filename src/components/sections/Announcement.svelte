@@ -58,6 +58,7 @@
     margin-top: -10px;
     font-size: 48px;
     font-weight: bold;
+    font-family: TATSanaSuksaBold;
     color: #e6332a;
   }
   hr {
