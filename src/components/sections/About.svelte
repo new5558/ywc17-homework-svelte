@@ -1,6 +1,10 @@
 <script>
+  import dompurify from 'dompurify';
   export let detail = ''
   export let condition = ''
+  
+  const datailSafe = dompurify.sanitize(detail);
+  const conditionSafe  =  dompurify.sanitize(condition);
 </script>
 
 <style lang="scss">
@@ -71,12 +75,12 @@
         ในประเทศ “ชิมช้อปใช้”
       </div>
       <div class="detail detail-description">
-        {@html detail}
+        {@html datailSafe}
       </div>
       <div class="detail-condition">
         <div class="detail detail-topic">เงื่อนไขการเข้าร่วมมาตรการ</div>
         <div class="detail">
-          {@html condition}
+          {@html conditionSafe}
         </div>
       </div>
     </div>
