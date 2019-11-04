@@ -1,10 +1,10 @@
 <script>
-  import dompurify from 'dompurify';
+  import createDOMPurify  from 'dompurify';
   export let detail = ''
   export let condition = ''
-  
-  const datailSafe = dompurify.sanitize(detail);
-  const conditionSafe  =  dompurify.sanitize(condition);
+  const dompurify  =  createDOMPurify(window);
+  $: detailSafe = dompurify.sanitize(detail);
+  $: conditionSafe  =  dompurify.sanitize(condition);
 </script>
 
 <style lang="scss">
@@ -75,7 +75,7 @@
         ในประเทศ “ชิมช้อปใช้”
       </div>
       <div class="detail detail-description">
-        {@html datailSafe}
+        {@html detailSafe}
       </div>
       <div class="detail-condition">
         <div class="detail detail-topic">เงื่อนไขการเข้าร่วมมาตรการ</div>
